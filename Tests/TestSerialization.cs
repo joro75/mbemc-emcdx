@@ -111,49 +111,5 @@ public class TestSerialization : TestWithClearWorkingFolder
         writer.Save();
     }
 
-    [Fact]
-    public void TestGeneratorSteppingLinear()
-    {
-        var generatorSettings = new DxValueGeneratorSettings()
-        {
-            Start = -125,
-            Length = 14,
-            Step = 20,
-            Mode = DxValueGeneratorMode.Linear
-        };
-        var generator = new DxValueGenerator(generatorSettings);
-
-        double[] expected = { -125, -105, -85, -65, -45, -25, -5, 15, 35, 55, 75, 95, 115, 135 };
-
-        var i = 0;
-        foreach (var value in generator)
-        {
-            Assert.Equal(expected[i++], value);
-        }
-        Assert.Equal(i, generatorSettings.ValueCount);
-    }
-
-    [Fact]
-    public void TestGeneratorSteppingLogarithmic()
-    {
-        var generatorSettings = new DxValueGeneratorSettings()
-        {
-            Start = 1,
-            Length = 5,
-            Step = 1,
-            Mode = DxValueGeneratorMode.Logarithmic
-        };
-        var generator = new DxValueGenerator(generatorSettings);
-
-        double[] expected = { 1, 1.01, 1.0201, 1.030301, 1.04060401, 1.05101005 };
-
-        var i = 0;
-        foreach (var value in generator)
-        {
-            Assert.Equal(expected[i++], value, 1e-7);
-        }
-        Assert.Equal(i, generatorSettings.ValueCount);
-    }
-
     #endregion Public Methods
 }

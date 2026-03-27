@@ -33,7 +33,7 @@ public class DxValueGenerator : IEnumerable<double>
             Current = ++step == 0 ? (double)Settings.Start : Settings.Mode switch
             {
                 DxValueGeneratorMode.Linear => (double)(Settings.Start + (Settings.Step * step)),
-                DxValueGeneratorMode.Logarithmic => Math.Exp(Math.Log((double)Settings.Start) + (double)(step * Settings.Step)),
+                DxValueGeneratorMode.Logarithmic => (double)(Settings.Start) * Math.Pow(1.0 + (double)Settings.Step / 100.0, step),
                 _ => throw new InvalidOperationException($"Invalid Mode {Settings.Mode}!"),
             };
             return step < Settings.ValueCount;

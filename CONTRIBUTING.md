@@ -11,11 +11,11 @@ By contributing you will agree that your contribution will be put under the same
 
 ## CLA
 
-Before you can contribute, you will need to sign our cla [Contributor License Agreement](https://github.com/mercedes-benz/foss/blob/main/cla/cla-mbition.pdf) and send the signed CLA to <cla-mbition@mercedes-benz.com> 
+Before you can contribute, you will need to sign our cla [Contributor License Agreement](https://github.com/mercedes-benz/.github/blob/main/cla/cla-mbition.pdf) and send the signed CLA to <cla-mbition@mercedes-benz.com> 
 
 ## Communication
 
-For communication please respect our [FOSS Code of Conduct](https://github.com/mercedes-benz/foss/blob/master/CODE_OF_CONDUCT.md).
+For communication please respect our [FOSS Code of Conduct](https://github.com/mercedes-benz/.github/blob/main/CODE_OF_CONDUCT.md).
 
 The following communication channels exist for this project:
 - Github for reporting and claiming issues:  

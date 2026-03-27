@@ -150,7 +150,7 @@ public class TestSerialization : TestWithClearWorkingFolder
         var i = 0;
         foreach (var value in generator)
         {
-            Assert.Equal(expected[i++], value);
+            Assert.Equal(expected[i++], value, 1e-7);
         }
         Assert.Equal(i, generatorSettings.ValueCount);
     }

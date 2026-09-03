@@ -114,9 +114,10 @@ With this structure, the **EMC Data Exchange Format** provides a powerful soluti
         "Name": "Frequency",
         "Unit": "MHz",
         "Generator": {
+          "Mode": "Linear",
           "Start": 0.1,
           "Step": 0.1,
-          "Count": 100
+          "Length": 100
         }
       },
       {

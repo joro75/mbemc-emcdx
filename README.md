@@ -51,7 +51,7 @@ var samples = reader.Read<SampleData>().ToList();
 This library loads all data fully into memory.
 Please ensure that sufficient RAM is available, especially when working with large files.
 
-**Maximum Supported Fule Sizes:**
+**Maximum Supported File Sizes:**
 - Emcdx files (.emcdx): up to ~128 MB
 - Binary files (.bin and .txt): up to 2 GB
 
@@ -114,9 +114,10 @@ With this structure, the **EMC Data Exchange Format** provides a powerful soluti
         "Name": "Frequency",
         "Unit": "MHz",
         "Generator": {
+          "Mode": "Linear",
           "Start": 0.1,
           "Step": 0.1,
-          "Count": 100
+          "Length": 100
         }
       },
       {
